@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Papers Extractor</title>
+<link href="../../docs/defaultstyles.css" rel="stylesheet" media="screen" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34855264-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div id="container">
+    <div id="wrapper">
+    <div id="banner">
+    <h1>Nikolas Karalis</h1>
+    <p>Neuroscience Graduate Student</p>
+    </div>
+    <div id="nav">
+    	<ul>
+        	<li><a href="../../index.html">Home&nbsp;&nbsp;</a></li>
+            <li><a href="../../docs/MyCV/cven.pdf">CV&nbsp;&nbsp;</a></li>
+            <li><a href="../../neuroscience.html">Neuroscience&nbsp;&nbsp;</a></li>
+            <li><a href="../../portfolio/portfolio.html">Photography&nbsp;&nbsp;</a></li>
+            <li><a href="../../research.html">Publications&nbsp;&nbsp;</a></li>
+            <li><a href="../../projects.html">Projects&nbsp;&nbsp;</a></li>
+            <li><a href="http://neurocomputing.tumblr.com">Blog&nbsp;&nbsp;</a></li>
+        </ul>
+    </div>
+    <div id="page">
+    <p>
+    As of April 2013, Papers 2 has added the missing functionality that the code below was trying to solve. So this project is now obsolete and only applies to the previous versions. It will remain online in the hope that it might help some more people liberate their databases. <br><br><br><br><br><br><br><br>
+    After experimenting for a while with the three major reference management software (<a href="http://www.mendeley.com/">Mendeley</a>, <a href="http://www.zotero.org/">Zotero</a>, <a href="http://www.mekentosj.com/">Papers</a>),<br> I decided that the best solution for my taste is to keep my papers classified in categories and use <a href="http://www.zotero.org/">Zotero</a> to add the citations when writing.
+    <a href="http://www.mendeley.com/">Mendeley</a> is probably the most concrete platform but has a steeper learning curve.<br>
+<br>
+   However one major issue when using the <a href="http://www.mekentosj.com/">Papers2</a> software to manage your papers, is the fact that you cannot export massively all the pdf files from one Collection. You do have access to the whole library and the database, but not to the collections.  <br>
+    I believe that this functionality is not provided by the developers, in an effort to tie you to this software and make the complete transition of your library to another reference management software difficult. <br>
+    <br><br> 
+    In order to resolve this issue, I wrote this software that extracts the pdf files from the Papers2 database, while preserving their classification in Collections.<br>
+    It is distributed under the <a href="http://www.gnu.org/licenses/gpl.html">GNU GPL licence</a>.<br><br>
+
+<a href="papers_extractor.app.zip"><strong>Download</strong></a><br>
+<a href="papers_extractor.py"><strong>Download code</strong></a><br><br><br>
+<a name=""><h3>How to use it</h3></a><br>
+You can either use the application file (double click to run) or if you need to adjust some of the settings, you can edit the code. <br>
+In order to run the code, you need to open a terminal, navigate to the directory where you saved it and type : <br>
+<code>python papers_extractor.py</code><br>
+<br>
+Ifthe path where your Papers database is located is different than the default or if you would like to change the output path, you can do so by changing the following variables respectively : <br> 
+<code>input_path</code> <br>
+<code>output_path</code>
+<br><br>
+This is a quick code to get the job done, so there is no extensive Exception catching etc. <br> Make sure that your paths are correct. 
+</p>
+    <div id="footer">
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.1 Transitional//EN">
+<html>
+<head>
+<title>Nikolas Karalis - Homepage</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-7">
+<meta content="The personal webpage of Nikolas Karalis" name="Description">
+<meta content="Nikolas Karalis" name="Author">
+<meta content="Nikolas, Karalis, math, mathematics, NTUA" name="Keywords">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34855264-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body vlink="black" link="black" style="font-size:17px">
+
+<h2 align="center">DNS Conflicts Project</h2>
+<div align="center">
+<br>
+</div>
+
+<div style="margin-left:5pt">
+<h4>Introduction</h4>
+During a conversation with my good friend, Nikos Charitonides (aka Jheremias) he told me his idea,about creating a program that would find all the <a href="http://en.wikipedia.org/wiki/Domain_Name_System">DNS</a> conflicts (if they exist) under a given <a href="http://en.wikipedia.org/wiki/Subnetwork">subnet</a>.<br>
+At first, we were not sure if there would exist any. So, I put together a Python that does exactly that. <br>
+
+<h4>How does the program works?</h4>
+It takes a subnet, let's say '147.102.' and it scans all the IP addresses that it includes. <br>
+
+This means that it scans all IPs between 147.102.0.0 - 147.102.255.255.<br>
+It then does a reverse nslookup at all these IPs and gets the domain where they point.<br>
+After that it does another nslookup at that domain and then checks for any DNS conflicts. <br>
+
+<h4>Download</h4>
+The easiest way to describe what it does is by showing you the code, so... <a href="dnsconflicts.rar">here</a> it is! ;)<br><br>
+This code is in the <b>public domain</b> so feel free to download, redistribute and modify this code as you want.<br>
+However, it would be appreciated if you mentioned me and Jheremias for this project and maybe provide a link for this webpage.<br>
+
+Enjoy it!<br><br>
+I will code an online tool for doing this work as soon as possible, so check this page again! ;)<br>
+
+<h4>About the project</h4>
+
+During the project, we scanned major Greek networks and we sent the results to the appropriate administators.<br><br>
+Here is a list with the subnets we have scanned, and link to the results.<br><br>
+<a href="look.tar">Results</a><br><br>
+<table BORDER=0 CELLSPACING=0 CELLPADDING=5><TR><TD>
+1) NTUA : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=147.102.&do_search=Search">147.102.</a> </TD></TR><TR><TD>
+
+2) NCSR Demokritos : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=143.233.&do_search=Search">143.233.</a></TD></TR><TR><TD>
+3) FORTH : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=139.91.&do_search=Search">139.91.</a></TD></TR><TR><TD>
+4) UOC : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=147.52.&submit.x=0&submit.y=0&submit=Search">147.52.</a></TD></TR><TR><TD>
+
+5) AUTH : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=155.207.&do_search=Search">155.207.</a> </TD></TR><TR><TD>
+6) HAFA : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=195.251.&do_search=Search">195.251.</a></TD></TR><TR><TD>
+7) PATRASNET : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=150.140.&do_search=Search">150.140.</a></TD></TR><TR><TD>
+
+8) ATHENA-NET : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=195.134.64.&do_search=Search">195.134.64.0 - 195.134.127.255</a></TD></TR><TR><TD>
+9) DOLNET : </TD><TD><a href="http://www.ripe.net/fcgi-bin/whois?form_type=simple&full_query_string=&searchtext=194.63.240.&do_search=Search">194.63.240.0 - 194.63.247.255</a></TD></TR><TR><TD>
+</div>
+
+</body></html>
+

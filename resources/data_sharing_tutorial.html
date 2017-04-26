@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Nikolas Karalis</title>
+<link href="../docs/defaultstyles.css" rel="stylesheet" media="screen" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34855264-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="headerscript_resources.js"></script>
+
+</head>
+
+<body>
+<div id="container">
+    <div id="wrapper">
+    <div class="header"></div>
+    
+        <div id="page">
+		
+        <div id="content">
+        <br>
+            
+1. Create a new group SHAREDGROUP and create a shared folder SHAREDFOLDER <br><br>
+2. Add the users you want to be in the group (edit the /etc/group file) <br><br>
+3. In the bash profile of *each* user (~/.bash_profile) add the following <br><br>
+<em>
+umask 0002<br>
+
+find SHAREDFOLDER -user OWNUSERNAME -exec chown OWNUSERNAME:SHAREDGROUP {} \;<br>
+
+find SHAREDFOLDER -user OWNUSERNAME -exec chmod -R 775 {} \;<br>
+</em>
+<br>
+Explanation:<br>
+<ul>
+<li>Go to the shared folder</li>
+<li>Find all data owned by the user</li>
+<li>Change the group owner of the data to the data sharing group</li>
+<li>Change the permissions so that group members can write</li>
+</ul>
+Note:  We do not use sticky bits (3775), because otherwise the group members cannot delete or rename the files.<br>
+<br>        
+<b>Alternative</b> (not preferable):<br>
+<em>
+(chown -R lu:datashare /storage/lu/data &) 2>/dev/null <br>
+(chmod -R 775 /storage/lu/data &) 2>/dev/null<br>
+</em>
+<br>
+4. After you add or modify files in the shared data folder, you need to either log in the shell again or type source ~/.bash_profile <br>  
+Alternatively you can have a daemon running and sourcing the profiles of all users in fixed intervals.<br>        
+
+<br><br>
+<b>Limitations</b><br>
+This only works for sharing one folder with one group.<br>
+You cannot share the folder with multiple distinct groups and similarly there is no group hierarchy.<br>
+To achieve such more complex schemes, you need to use ACLs.<br>
+
+
+
+
+ 
+
+        </div>
+	</div>
+    </div>
+    <div id="footer">
+    </div>
+</div>
+</body>
+</html>

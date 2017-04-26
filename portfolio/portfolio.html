@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Nikolas Karalis</title>
+<link href="galleria.css" rel="stylesheet" type="text/css" media="screen">
+<link href="portfolio.css" rel="stylesheet" media="screen" />
+    
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34855264-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.galleria.js"></script>
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+		
+		$('.gallery_demo_unstyled').addClass('gallery_demo'); // adds new class name to maintain degradability
+		
+		$('ul.gallery_demo').galleria({
+			history   : true, // activates the history object for bookmarking, back-button etc.
+			clickNext : true, // helper for making the image clickable
+			insert    : '#main_image', // the containing selector for our main image
+			onImage   : function(image,caption,thumb) { // let's add some image effects for demonstration purposes
+				
+				// fade in the image & caption
+				image.css('display','none').fadeIn(1000);
+				caption.css('display','none').fadeIn(1000);
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// fade out inactive thumbnail
+				_li.siblings().children('img.selected').fadeTo(500,0.3);
+				
+				// fade in active thumbnail
+				thumb.fadeTo('fast',1).addClass('selected');
+				
+				// add a title for the clickable image
+				image.attr('title','Next image >>');
+			},
+			onThumb : function(thumb) { // thumbnail effects goes here
+				
+				// fetch the thumbnail container
+				var _li = thumb.parents('li');
+				
+				// if thumbnail is active, fade all the way.
+				var _fadeTo = _li.is('.active') ? '1' : '0.3';
+				
+				// fade in the thumbnail when finnished loading
+				thumb.css({display:'none',opacity:_fadeTo}).fadeIn(1500);
+				
+				// hover effects
+				thumb.hover(
+					function() { thumb.fadeTo('fast',1); },
+					function() { _li.not('.active').children('img').fadeTo('fast',0.3); } // don't fade out if the parent is active
+				)
+			}
+		});
+	});
+	
+	</script>
+	<style media="screen,projection" type="text/css">
+	
+	/* BEGIN DEMO STYLE */
+	*{margin:0;padding:0}
+	body{padding:20px;background:white;text-align:center;background:black;color:#bba;font:80%/140% georgia,serif;}
+	h1,h2{font:bold 80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
+	a{color:#348;text-decoration:none;outline:none;}
+	a:hover{color:#67a;}
+	.caption{font-style:italic;color:#887;}
+	.demo{position:relative;margin-top:2em;}
+	.gallery_demo{width:702px;margin:0 auto;}
+	.gallery_demo li{width:68px;height:50px;border:3px double #111;margin: 0 2px;background:#000;}
+	.gallery_demo li div{left:240px}
+	.gallery_demo li div .caption{font:italic 0.7em/1.4 georgia,serif;}
+	
+	#main_image{margin:0 auto 60px auto;height:464px;width:700px;background:black;}
+	#main_image img{margin-bottom:10px;}
+	
+	.nav{padding-top:15px;clear:both;font:80% 'helvetica neue',sans-serif;letter-spacing:3px;text-transform:uppercase;}
+	
+	.info{text-align:left;width:700px;margin:30px auto;border-top:1px dotted #221;padding-top:30px;}
+	.info p{margin-top:1.6em;}
+	
+    </style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19365626-2']);
+  _gaq.push(['_setDomainName', '.nikolaskaralis.gr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</head>
+
+        
+<body>
+<div id="container">
+    <div id="wrapper">
+    
+      <div id="banner">
+    	<h1>Nikolas Karalis</h1>
+    	<p>Neuroscience Graduate Student</p>
+    	<!--<img  src="docs/images/thinker.jpg" id="fac_photo" height="125" width="100" style="vertical-align:top; float:right"/>-->
+    </div>
+    <div id="nav">
+    	<ul>
+      	<li><a href="../index.html">Home</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="../docs/MyCV/NikolaosKaralis_CV.pdf">CV</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="../research.html">Research</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="../publications.html">Publications</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="../resources.html">Resources</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>            
+        <li><a href="../portfolio/portfolio.html">Photography</a></li>
+        <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+        <li><a href="../news.html">News</a></li>
+        </ul>
+    </div>
+<div id="page" style="background: black;">		
+<div id="content" style="background: black;">
+        
+<div class="demo" style="background: black;">
+<div id="main_image"></div>
+<ul class="gallery_demo_unstyled">
+    <li><img src="img/p1.jpg" alt="kadikoy small port" title="Small port in Kadikoy, Istanbul (2010)"></li>
+    <li><img src="img/p2.jpg" alt="flower" title="Small flower in a garden in Kadikoy, Istanbul (2010)"></li>
+    <!--<li><img src="img/p3.jpg" alt="elisavet" title="Elisavet"></li>-->
+    <li><img src="img/p4.jpg" alt="mosque" title="Mosque near Aghia Sofia, Istanbul (2010)"></li>
+    <li><img src="img/p5.jpg" alt="boy" title="Homeless young boy inhaling glue from a bag in a park in Istanbul (2010)"></li>
+    <li><img src="img/p6.jpg" alt="turkish flag" title="Turkish flag, Istanbul (2010)"></li>
+    <li><img src="img/p7.jpg" alt="ferry" title="View from the ferry, Istanbul (2010)"></li>
+    <li><img src="img/p8.jpg" alt="waves" title="Waves in Alimos, Athens (1st January 2011)"></li>
+    <li><img src="img/p9.jpg" alt="bugs" title="Detail from an installation in the Rene Magritte Museum in Brussels (2011)"></li>
+    <li><img src="img/p10.jpg" alt="liberty" title="Liberty Statue, Manhattan, NYC (2011)"></li>
+    <li class="active"><img src="img/p11.jpg" alt="timessquare" title="Times Square, Manhattan, NYC (2011)"></li>
+    <li><img src="img/p12.jpg" alt="avignon" title="Detail from 'Les Demoiselles d'Avignon', Pablo Picasso - Museum of Modern Art (MoMA), Manhattan, NYC (2011)"></li>
+    <li><img src="img/p13.jpg" alt="florence" title="Ponte Vecchio, Florence (2012)"></li>
+    <li><img src="img/p14.jpg" alt="duck" title="Via dell Inferno, Via del Purgatorio, Firenze (2012)"></li>
+    <li><img src="img/p15.jpg" alt="duck" title="A duck in river Spree, Berlin (2012)"></li>
+    <li><img src="img/p16.jpg" alt="lake" title="Berlin (2012)"></li>
+    <li><img src="img/p17.jpg" alt="vesak" title="Vesakha (Buddha Day), Berlin (2012)"></li>
+    <li><img src="img/p18.jpg" alt="erstermai" title="Erster Mai, Kreuzberg, Berlin (2012)"></li>
+    <li><img src="img/p19.jpg" alt="stockholm" title="Brunnsviken, Stockholm (2012)"></li>
+    <li><img src="img/p20.jpg" alt="barcelona" title="Avinguda de Gaudi, Barcelona (2012)"></li>
+    <li><img src="img/p21.jpg" alt="lamps" title="Notre Dame, Paris (2012)"></li>
+    <li><img src="img/p22.jpg" alt="fire" title="Notre Dame, Paris (2012)"></li>
+    </ul>
+<p class="nav"><a href="#" onclick="$.galleria.prev(); return false;">&laquo; previous</a> | <a href="#" onclick="$.galleria.next(); return false;">next &raquo;</a></p>
+</div>
+
+        </div>
+	</div>
+    </div>
+    <div id="footer">
+    </div>
+</div>
+</body>
+</html>

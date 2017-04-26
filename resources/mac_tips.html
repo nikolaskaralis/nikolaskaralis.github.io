@@ -1,0 +1,561 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Nikolas Karalis</title>
+<link href="../docs/defaultstyles.css" rel="stylesheet" media="screen" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34855264-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="headerscript_resources.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <div id="wrapper">
+    <div class="header"></div>
+    
+        <div id="page">
+
+        <div id="content">
+        <br>
+<center><h2>Useful tips for using Mac OS X for research</h2></center>
+        <br>
+        <div id="contentbar" class="contentbar1">
+        		<h4>&nbsp;&nbsp;1. <a href="#howtos">How-Tos</a></h4>
+        		<h4>&nbsp;&nbsp;2. <a href="#shortcuts">Shortcuts</a></h4>
+        		<h4>&nbsp;&nbsp;3. <a href="#applications">Applications</a></h4>
+        		<h4>&nbsp;&nbsp;4. <a href="#scientific">Scientific Software</a></h4>
+        		<h4>&nbsp;&nbsp;5. <a href="#links">Links</a></h4>
+        		<h4>&nbsp;&nbsp;6. <a href="#commands">Terminal Commands</a></h4>
+
+        	</div><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	<!--<img src="../docs/images/wip.jpg"><br><br><br><br><br><br></img>-->
+        	<br><br><br><br><br><br><br><br><br><br>
+            
+            
+            
+
+<p>
+
+<h3><a name="howtos">How-To</a></h3>
+<ul>
+
+<li><h4>Dictionary and Thesaurus</h4>
+One very practical feature of Mac : Using Spotlight (shortcut : command + space) you can type in a word and if you click the result tagged "Definition" (or "Look Up" in newer versions) it opens up the Dictionary.<br>
+By clicking on the Thesaurus tab (or any of the alternative) you search for the same word in the different databases.<br>
+The shortcut : Command + L takes you directly to that entry and Command + D opens the dictionary application.
+</li>
+
+<li><h4>Add extra languages to the Dictionary</h4>
+In order to add extra languages to the Dictionary applications, the first step is to use the Preferences menu and select the ones you want that are already available. <br>
+To add languages from external files, you need to use the <a href="http://code.google.com/p/mac-dictionary-kit">DictUnifier</a> application to convert them to the correct format.
+</li>
+
+<li><h4>Make Safari download PDF files instead of openning them</h4>
+In terminal, type: <code>defaults write com.apple.Safari WebKitOmitPDFSupport -bool YES</code> and restart Safari.
+</li>
+
+<li><h4>Creating Bootable USB in Mac OS X (Leopard or higher) using DiskUtil</h4>
+	1.	Open a Terminal, Insert your flash media and run diskutil list again and determine the device node assigned to your flash media (e.g. /dev/disk2)<br>
+	2.	Run diskutil unmountDisk /dev/diskN<br>
+	3.	Execute sudo dd if=/path/to/downloaded.img of=/dev/diskN bs=1m<br>
+	4.	Run diskutil eject /dev/diskN and remove your flash media when the command completes<br>
+</li>
+<li><h4>Create text clippings</h4>
+Highlight a text and drag it to the desktop. This creates a clipping file which contains the text.
+</li>
+<li><h4>Insert special characters</h4>
+In TextEdit, go to menu Edit - Special Characters.
+</li>
+<li><h4>Use boolean operators in spotlight</h4>
+You can use the boolean operators AND, NOT and OR in the spotlight search.
+</li>
+<li><h4>Protect files from deletion</h4>
+You can protect important files from accidental deletion by locking them. To do so, right click on the file - Get Info - check "Locked"<br>
+Stationery pad option creates a copy of the file every time you access it, in order to protect the file from accidental modifications.
+</li>
+<li><h4>Use keyboard viewr</h4>
+Click on the language icon in the menu bar and select Keyboard Viewer. With this application you can find the shortcuts for many special characters etc.
+</li>
+
+<li><h4>Read RSS</h4>
+To follow blogs and websites using the RSS protocol, one of the best tools is <a href="http://www.google.com/reader/">Google Reader</a>.<br>
+For pages that change but do not support RSS, various online tools can be used to provide the content in RSS. A good example is <a href="page2rss.com/">Page2RSS</a>.
+</li>
+
+<li><h4>Tag cloud</h4>
+<a href="http://www.wordle.net/">Wordle tag cloud generator</a> - It helps generate some of the nicest tag clouds out there.<br>
+<a href="http://rive.rs/projects/tumblr-tag-clouds">Tumblr tag cloud generator</a> - Very easy to use, javascript/Tumblr API based tag cloud generator.
+</li>
+
+<li><h4>Block access to specific domain</h4>
+echo 0.0.0.0 "domainname" >> /etc/hosts <br>
+If you ever want to remove the blocking, open the file /etc/hosts and remove the corresponding line.
+</li>
+
+<li><h4>Share files</h4>
+<a href="http://dropbox.com/">Dropbox</a> and <a href="https://drive.google.com/">Google Drive</a> are the two best options.<br>
+In Dropbox, you can create photo albums, make your files public, create shared folders, synchronize and backup your data.<br>
+</li>
+
+<li><h4>Host a website</h4>
+There are many ways to do that, but a particularly easy an straightforward way is by using the <a href="http://dropbox.com/">Dropbox</a>. <br>
+You can just create the website and place it in the Public folder of Dropbox. If you own a domain, you can set up a web redirect service, linking to your homepage.
+</li>
+
+<li><h4>Multimedia</h4>
+<ul>
+<li><h4>Take Screenshot</h4>
+a. Full screen : Command + Shift + 3 <br>
+b. Partial : Command + Shift + 4 and select the area you want
+</li>
+<li><h4>Record Screencast</h4>
+Using QuickTime Player, menu File - New Screen Recording. <br>
+It can record microphone and computer sounds. <br>
+Trick : If you want to record from the computer camera on the same time, you can do it in two ways : <br>
+1. Use QuickTime's Movie recording to record in Parallel and then post-process the two videos if you want to overlay one to the other. <br>
+2. Use QuickTime's Movie recording but instead of recording the video from the camera, just have the camera window open in the desired place in the screen.
+</li>
+<li><h4>Make a video from images</h4>
+In QuickTime, go to File - Import Image Sequence and import the images you want to convert to a video.
+</li>
+<li><h4>Disable the Volume changing sound effect</h4>
+When setting the Volume, there is a sound effect which can be disabled by going to the menu : <br>
+System Preferences - Sound - Sound Effects - Uncheck "Play feedback when volume is changed"
+</li>
+<li><h4>Disable startup sound</h4>
+To disable the startup sound, type the following at the terminal : <code>sudo nvram SystemAudioVolume=%80</code>.<br>
+Alternatively, you can install the <a href="http://www5e.biglobe.ne.jp/~arcana/index.en.html">StartupSound pref pane</a>.
+</li>
+
+</ul>
+</li>
+
+
+<li><h4>Maintenance</h4>
+<ul>
+<li><h5>Repair disk permissions</h5></li>
+Disk Utility - Verify Disk Permissions - Repair Disk Permissions
+<li><h4>Apple Hardware Test</h4>
+To launch Apple Hardware Test (a utility that checks the status of various components of the Mac, reboot and hold down one of the following combinations during startup : <br>
+* Option + D<br>
+* Command + D<br>
+* D
+</li>
+<li><h4>Start up in Single-User Mode</h4>
+Hold down Command + p while starting up.
+</li>
+
+<li><h4>Enable TRIM</h4>
+<!--
+http://rafeed.me/2011/03/25/enable-trim-on-your-mac-ssd-in-os-x/
+http://lifehacker.com/5803331/how-to-enable-trim-on-your-macs-solid+state-drive
+ -->
+</li>
+<li><h4>Minimize application footprint</h4>
+Monolingual
+
+
+
+</li>
+<li><h4>Reduce standby delay</h4>
+To check the standby delay (in seconds) : pmset -g |grep standbydelay <br>
+To set it : <code> sudo pmset -a standbydelay 43200 </code>
+
+</li>
+
+<li><h4>Disable startup chime</h4>
+Type in terminal : <code> sudo nvram SystemAudioVolume=%80</code>
+</li>
+
+<li><h4>Disable sleep mode for given time</h4>
+Type in terminal : <code>caffeinate -t MINUTES</code>, where MINUTES the number of minutes you want to disable sleeping mode for.
+</li>
+
+<li><h4>Disable notification center</h4>
+Type in terminal : <code>launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist</code><br>
+followed by : <code>killall NotificationCenter</code>
+</li>
+
+<li><h4>Enable copying from QuickView mode</h4>
+Type in terminal : <code>defaults write com.apple.finder QLEnableTextSelection -bool true </code><br>
+followed by : <code>killall Finder</code>
+</li>
+
+
+</ul>
+
+<li><h4>To be added</h4>
+<ul>
+<li><h4>Create aliases</h4>
+</li>
+
+<li><h4>Print to PDF file</h4>
+</li>
+
+<li><h4>Use LaTeX</h4>
+Texshop
+</li>
+
+<li><h4>Write Greek in LaTeX</h4>
+</li>
+
+<li><h4>Use Windows in Parallels</h4>
+</li>
+
+<li><h4>Share files and folders</h4>
+</li>
+
+<li><h4>Connect Remotely with another computer</h4>
+</li>
+
+<li><h4>Use torrent protocol</h4>
+</li>
+
+<li><h4>Use internet relay chat (IRC)</h4>
+</li>
+
+<li><h4>Find ebooks on IRC</h4>
+</li>
+
+<li><h4>Control mac with speech</h4>
+<!--http://lifehacker.com/215764/hack-attack-make-your-macs-speech-recognition-work-for-you -->
+</li>
+
+<li><h4>Automator</h4>
+<!--http://www.maclife.com/article/features/15_automator_and_applescripts_you_can%E2%80%99t_live_without
+http://lisapple.free.fr/automator/
+https://developer.apple.com/library/mac/#documentation/AppleApplications/Conceptual/AutomatorConcepts/Automator.html
+http://automator.us/leopard/index.html
+http://automatorworld.com/
+-->
+</li>
+
+<li><h4>Apple Script</h4>
+<!--https://developer.apple.com/library/mac/#documentation/AppleScript/Conceptual/AppleScriptX/AppleScriptX.html
+http://www.macworld.com/article/1151125/texteditwordcount.html
+-->
+</li>
+
+<li><h4>Burn DVD</h4>
+</li>
+
+<li><h4>Create ISO file</h4>
+</li>
+
+<li><h4>Convert a DMG file to ISO</h4>
+hdiutil convert /path/imagefile.dmg -format UDTO -o /path/convertedimage.iso
+</li>
+
+<li><h4>Convert an ISO file to DMG format</h4>
+hdiutil convert /path/imagefile.iso -format UDRW -o /path/convertedimage.dmg
+</li>
+
+<li><h4>Reference management</h4>
+</li>
+
+
+
+<li><h4>Blogging</h4>
+</li>
+
+
+<li><h4>Security upgrade</h4>
+To be added : Prey, encrypt files, Vidalia, Tor, Firewall
+</li>
+
+</ul></li>
+
+</ul>
+
+<br><br><br><br><br>
+<h3><a name="shortcuts">Shortcuts</a></h3>
+<div id="contentbar" class="contentbar1">
+<h5>List of key names</h5>
+<p>⌘ &nbsp;Command<br>
+<img alt="Control key icon" src="http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT1343/ks_control.gif" height="9" width="9">&nbsp;&nbsp;Control<br>
+<img alt="Option or Alt key icon" src="http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT1343/ks_option.gif" height="9" width="9">&nbsp;&nbsp;Option - "Alt"<br>
+<img alt="Shift icon" src="http://km.support.apple.com/library/APPLE/APPLECARE_ALLGEOS/HT1343/ks_shift.gif" height="9" width="9">&nbsp;&nbsp;Shift<br>
+fn (Function key)&nbsp;</p>
+</div><br><br><br><br><br><br><br><br>
+<ul>
+<li>Add a Paste Without Formatting shortcut: Go to System Preferences --> Keyboard --> select the Keyboard Shortcuts tab, --> select "App Shortcuts". Click the plus button at the bottom and enter (sans-quotes) "Paste and Match Style" for the Menu Title --> In the Keyboard Shortcut, press the desired shortcut (e.g. Shift + Command + V) --> Press the Add button.</li>
+<li>Space : Quick look file</li>
+<li>Enter : Rename</li>
+<li>Alt : Changes some of the application menus</li>
+<li>Command + Space : Open Spotlight search</li>
+<li>Escape : Clear what you have typed (in Spotlight)</li>
+<li>double Escape : Close Spotlight search</li>
+<li>Command + , (comma) : Open application preferences</li>
+<li>Command + W : Close window</li>
+<li>Command + Q : Quit application</li>
+<li>Command + o : Open selected file</li>
+<li>Command + Tab : Cycle between applications</li>
+<li>Command + ~ : Cycle between windows of the same application</li>
+<li>Command + down arrow : Open selected file</li>
+<li>Command + up arrow : Move to enclosing folder</li>
+<li>Command + down arrow : Open file</li>
+<li>Alt + click on menu bar items : Extra options</li>
+<li>Command + L : Create an alias</li>
+<li>Command + R : Open the original (for an alias)</li>
+<li>Command + Alt + drag and drop file : Creates and moves an alias instead of the actual file</li>
+<li>Command + Enter : While in Spotlight, it opens the parent folder of the selected file</li>
+<li>Command + Backspace : Send selected file to Trash</li>
+<li>Alt + Empty Trash : Securely delete data</li>
+-----------------------------------------------------------------------------
+<li>Command + T : Open new tab (in Firefox/Chrome)</li>
+<li>Command + W : Close tab (in Firefox/Chrome)</li>
+<li>Control + Tab : Cycle between tabs (in Firefox/Chrome)</li>
+<li>Command + N : Open new window (in Firefox/Chrome)</li>
+<li>Command + click : Open link in new tab (in Firefox/Chrome)</li>
+<li>Command + Enter : Open typed url in new tab (in Firefox/Chrome)</li>
+<li>Command + "=" : subscript (in Word)</li>
+<li>Shift + Command + "=" : superscript (in Word)</li>
+<li>Alt + Space : non-breaking space (in Word)</li>
+<li>Shift + Enter : line break (in Word)</li>
+<li>Control + Command + H : Highlight selected text (in Preview)</li>
+<li>Command + L takes you directly to the dictionary entry (in Spotlight search)</li>
+<li>Command + D : opens the dictionary application. (in Spotlight search)</li>
+</ul>
+<br><br><br><br><br>
+
+<h3><a name="applications">Applications</a></h3>
+<ul>
+<li><a href="http://www.vitamindinc.com/">Vitamin d</a>&nbsp; - &nbsp; Detects objects and people in video</li>
+<li><a href="http://www.fluidapp.com/"></a>Fluid&nbsp; - &nbsp;Turn web apps into Mac apps</li>
+<li><a href="http://paulgorman.org/software/NanoCount/">NanoCount</a>&nbsp; - &nbsp;Count words/characters in TextEdit</li>
+<li><a href="http://mplayerx.org/">MPlayerX</a>&nbsp; - &nbsp;Media player</li>
+<li><a href="http://code.google.com/p/telephone/">Telephone</a>&nbsp; - &nbsp;SIP client</li>
+<li><a href="http://handbrake.fr/">Handbrake</a>&nbsp; - &nbsp;Video transcoder</li>
+<li><a href="http://www.grumlapp.com/">Gruml</a>&nbsp; - &nbsp;Google RSS reader</li>
+<li><a href="http://www.transmissionbt.com/">Transmission</a>&nbsp; - &nbsp;Torrent client</li>
+<li><a href="http://www.kju-app.org/">Q emulator</a>&nbsp; - &nbsp;Allows running Windows apps under Mac OS X</li>
+<li><a href="http://www.videolan.org/vlc/index.html">VLC</a>&nbsp; - &nbsp;Media Player</li>
+<li><a href="http://perian.org/">Perian</a>&nbsp; - &nbsp;Adds file support for QuickTime</li>
+<li><a href="http://code.google.com/p/macfuse/">MacFUSE</a>&nbsp; - &nbsp;Extends native file system handling</li>
+<li><a href="http://qsapp.com/">QuickSilver</a>&nbsp; - &nbsp;Adds extra control and interface</li>
+<li><a href="http://bitcoin.org/">Bitcoin</a>&nbsp; - &nbsp;Digital currency</li>
+<li><a href="http://kismac-ng.org/">Kismac</a>&nbsp; - &nbsp;Wireless stumbling and security tool</li>
+<li><a href="http://audacity.sourceforge.net/">Audacity</a>&nbsp; - &nbsp;Audio editor</li>
+<li><a href="http://www.gimp.org/">GIMP</a>&nbsp; - &nbsp;Image Editor</li>
+<li><a href="http://seashore.sourceforge.net/">Seashore</a>&nbsp; - &nbsp;Image Editor</li>
+<li><a href="http://code.google.com/p/formulatepro/">Formulate Pro</a>&nbsp; - &nbsp;Fill PDF forms</li>
+<li><a href="http://www.scribus.net">Scribus</a>&nbsp; - &nbsp;Desktop publishing and layout</li>
+<li><a href="http://www.cyberduck.ch/">Cyberduck</a>&nbsp; - &nbsp;FTP client</li>
+<li><a href="http://colloquy.info/">Colloquy</a>&nbsp; - &nbsp;IRC client</li>
+<li><a href="http://bluegriffon.org/">BlueGriffon</a>&nbsp; - &nbsp;WYSIWYG HTML editor</li>
+<li><a href="http://kodapp.com/">Kod</a>&nbsp; - &nbsp;Code editor</li>
+<li><a href="http://www.macupdate.com/app/mac/22211/insomniax">InsomniaX</a>&nbsp; - &nbsp;Disables lid and/or idle sleep for MacBook</li>
+<li><a href="http://www.tuxera.com/products/tuxera-ntfs-for-mac/">Tuxera NTFS</a>&nbsp; - &nbsp;Allows writing on NTFS volumes</li>
+<li><a href=“”>CamTwist</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>Piezo</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>TorChat</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>OmmWriter</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>OpenOffice</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>TextExpander</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>DjView/MacDjView</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>StuffitExpander</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>Tubby</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>FileJuicer</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>Comical</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>Adapter</a>&nbsp; - &nbsp;</li>
+<li><a href=“”>Audio Hijack Pro</a>&nbsp; - &nbsp;</li>
+<li><a href="">Dyyno Broadcaster</a>&nbsp; - &nbsp;</li>
+<li><a href="">ffmpegX</a>&nbsp; - &nbsp;</li>
+<li><a href="">Jubler</a>&nbsp; - &nbsp;</li>
+<li><a href="">xACT</a>&nbsp; - &nbsp;</li>
+<li><a href="">Paintbrush</a>&nbsp; - &nbsp;</li>
+<li><a href="">luminance-hdr</a>&nbsp; - &nbsp;</li>
+<li><a href="">HDRtist</a>&nbsp; - &nbsp;</li>
+<li><a href="">EazyDraw</a>&nbsp; - &nbsp;</li>
+<li><a href="">Readiris Pro</a>&nbsp; - &nbsp;</li>
+<li><a href="">Desktop Curtain</a>&nbsp; - &nbsp;</li>
+<li><a href="">Angry IP Scanner</a>&nbsp; - &nbsp;</li>
+<li><a href="">Filezilla</a>&nbsp; - &nbsp;</li>
+<li><a href="">Cyberduck</a>&nbsp; - &nbsp;</li>
+<li><a href="">Dropbox</a>&nbsp; - &nbsp;</li>
+<li><a href="">SSHTunnel</a>&nbsp; - &nbsp;</li>
+<li><a href="">Transmission</a>&nbsp; - &nbsp;</li>
+<li><a href="">Tunnelblick</a>&nbsp; - &nbsp;</li>
+<li><a href="">Wireshark</a>&nbsp; - &nbsp;</li>
+================================
+<li><a href="">Temperature Monitor</a>&nbsp; - &nbsp;</li>
+<li><a href="">atMonitor</a>&nbsp; - &nbsp;</li>
+<li><a href="">coconutBattery</a>&nbsp; - &nbsp;</li>
+<li><a href="">GrandePerspective</a>&nbsp; - &nbsp;</li>
+<li><a href="">gmvault</a>&nbsp; - &nbsp;</li>
+<li><a href="">Caffeine</a>&nbsp; - &nbsp;</li>
+<li><a href="">Clipboard History</a>&nbsp; - &nbsp;</li>
+<li><a href="">Dedupo</a>&nbsp; - &nbsp;</li>
+<li><a href="">Tidy Up!</a>&nbsp; - &nbsp;</li>
+-----------------------------------------
+<li><a href="">BetterTouchTool</a>&nbsp; - &nbsp;</li>
+<li><a href="">CCleaner</a>&nbsp; - &nbsp;</li>
+<li><a href="">CleanMyMac</a>&nbsp; - &nbsp;</li>
+<li><a href="">IceClean</a>&nbsp; - &nbsp;</li>
+<li><a href="">iTweax</a>&nbsp; - &nbsp;</li>
+<li><a href="">kfc</a>&nbsp; - &nbsp;</li>
+<li><a href="">MacPilot</a>&nbsp; - &nbsp;</li>
+<li><a href="">Monolingual</a>&nbsp; - &nbsp;</li>
+<li><a href="">OnyX</a>&nbsp; - &nbsp;</li>
+<li><a href="">TinkerTool</a>&nbsp; - &nbsp;</li>
+<li><a href="">Xslimmer</a>&nbsp; - &nbsp;</li>
+<li><a href="">Secrets (pref pane)</a>&nbsp; - &nbsp;</li>
+<li><a href="">Growl</a>&nbsp; - &nbsp;</li>
+<li><a href="">Startup Sound (pref pane)</a>&nbsp; - &nbsp;</li>
+<li><a href="">SANE (pref pane)</a>&nbsp; - &nbsp;</li>
+<li><a href="http://www.charlessoft.com/">Pacifist</a>&nbsp; - &nbsp;Useful for reinstalling software from the Software Disk</li>
+</ul>
+<br><br><br><br><br>
+
+<h3><a name="scientific">Scientific Software</a></h3>
+<ul>
+<li><a href=“http://www.arduino.cc/”>Arduino</a>&nbsp; - &nbsp;Open source electronic prototyping platform</li>
+<li><a href=“http://biosig.sourceforge.net/”>biosig (matlab)</a>&nbsp; - &nbsp;Matlab library</li>
+<li><a href=“http://mouse.brain-map.org/static/brainexplorer”>Brain Explorer 2</a>&nbsp; - &nbsp;Allen Mouse Brain Atlas</li>
+<li><a href=“http://www.cellprofiler.org/”>Cell Profiler</a>&nbsp; - &nbsp;Open source image analysis and microscopy software</li>
+<li><a href=“http://sccn.ucsd.edu/eeglab/”>EEGlab</a>&nbsp; - &nbsp;EEG Matlab toolbox</li>
+<li><a href=“http://www.evernote.com/”>Evernote</a>&nbsp; - &nbsp;Note taking software</li>
+<li><a href=“http://fiji.sc/”>Fiji</a>&nbsp; - &nbsp;Image processing</li>
+<li><a href=“http://www.gapminder.org/”>Gapminder</a>&nbsp; - &nbsp;Data visualization</li>
+<li><a href=“http://www.macupdate.com/info.php/id/13938”>Genius</a>&nbsp; - &nbsp;Memorization software</li>
+<li><a href=“http://www.graphviz.org/”>Graphviz</a>&nbsp; - &nbsp;Data visualization</li>
+<li><a href=“http://downloads.isquare.gr/cgi-bin/downloader.cgi/appledownloads”>Greek Thesaurus</a>&nbsp; - &nbsp;</li>
+<li><a href=“http://rsbweb.nih.gov/ij/”>ImageJ</a>&nbsp; - &nbsp;Image processing</li>
+<li><a href=“http://mac.softpedia.com/get/Math-Scientific/GraphPad-InStat.shtml”>InStat3</a>&nbsp; - &nbsp;Statistical software</li>
+<li><a href=“http://www.magenta.gr/en/lexicons/en_en_dictionary.htm”>Magenta Dictionaries</a>&nbsp; - &nbsp;</li>
+<li><a href=“http://www.mathworks.com/products/matlab/”>MATLAB</a>&nbsp; - &nbsp;</li>
+<li><a href=“http://www.mendeley.com/”>Mendeley</a>&nbsp; - &nbsp;Reference management</li>
+<li><a href=“http://www.micro-manager.org/”>Micro-Manager</a>&nbsp; - &nbsp;Open Source Microscopy Software</li>
+<li><a href=“http://ccl.northwestern.edu/netlogo/”>NetLogo</a>&nbsp; - &nbsp;Multi-agent programmable modeling environment</li>
+<li><a href=“http://www.neurolens.org/”>NeuroLens</a>&nbsp; - &nbsp;Functional neuroimaging image analysis</li>
+<li><a href=“http://orange.biolab.si/”>Orange</a>&nbsp; - &nbsp;Data mining</li>
+<li><a href=“http://www.gnu.org/software/octave/”>Octave</a>&nbsp; - &nbsp;</li>
+<li><a href=“http://www.osirix-viewer.com/”>OsiriX</a>&nbsp; - &nbsp;DICOM Viewer</li>
+<li><a href=“http://www.mekentosj.com/papers/”>Papers2</a>&nbsp; - &nbsp;Reference management</li>
+<li><a href=“http://www.graphpad.com/scientific-software/prism/”>Prism5</a>&nbsp; - &nbsp;Statistics</li>
+<li><a href=“www.psychopy.org”>PsychoPy</a>&nbsp; - &nbsp;Psychophysics software</li>
+<li><a href=“http://www.r-project.org/”>R</a>&nbsp; - &nbsp;Statistical computing</li>
+<li><a href=“http://www.rosettastone.com/”>Rosetta Stone</a>&nbsp; - &nbsp;Language Learning</li>
+<li><a href=“http://www.scribus.net/”>Scribus</a>&nbsp; - &nbsp;Layout and publishing</li>
+<li><a href=“http://sigviewer.sourceforge.net/”>sigviewer</a>&nbsp; - &nbsp;Singal Viewer</li>
+<li><a href=“http://office.microsoft.com/en-us/excel-help/introduction-to-optimization-with-the-excel-solver-tool-HA001124595.aspx”>Solver</a>&nbsp; - &nbsp;Optimization add-on for Excel</li>
+<li><a href=“http://www.sinauer.com/detail.php?id=8841”>Sylvius 4</a>&nbsp; - &nbsp;CNS Anatomy</li>
+<li><a href=“http://www.xm1math.net/texmaker/”>texmaker</a>&nbsp; - &nbsp;LaTeX development environment</li>
+<li><a href=“http://www.zotero.org/”>Zotero</a>&nbsp; - &nbsp;Reference management</li>
+</ul>
+<br><br><br><br><br>
+
+<h3><a name="links">Links</a></h3>
+<ul>
+<li><a href="http://mac2.microsoft.com/help/office/14/en-us/word/">Help for Microsoft Word for Mac</a></li>
+<li><a href="http://downloads.isquare.gr/cgi-bin/downloader.cgi/appledownloads">Official Greek software support for Mac</a></li>
+<li><a href="http://hints.macworld.com/">MacWorld hints</a></li>
+<li><a href="http://www.macresearch.org/">MacResearch</a></li>
+<li><a href="http://www.macosxtips.co.uk/">MacOSXTips</a></li>
+<li><a href="http://secrets.blacktree.com/">Hidden settings</a></li>
+
+<li></li>
+</ul>
+<br><br><br><br><br>
+
+<h3><a name="commands">Terminal Commands</a></h3>
+All the commands below can take a lot of options, that alter their behavior.<br>
+Using the command : <code>man "commandname"</code> you can find all the necessary information for using it.<br>
+"filename" signifies the file and should be used without the quotes.<br>
+<ul>
+<h4>Basic</h4>
+<li><code>history</code> <br>&nbsp; displays command history</li>
+<li><code>more</code> <br>&nbsp; displays contents of file</li>
+<li><code>head"filename"</code> <br>&nbsp; outputs first 10 lines of file</li>
+<li><code>head"filename"</code> <br>&nbsp; outputs last 10 lines of file</li>
+<li><code>chmod</code> <br>&nbsp; change file permissions </li>
+<li><code>cd</code> <br>&nbsp; change directory</li>
+<li><code>mkdir</code> <br>&nbsp; create directory</li>
+<li><code>mv "filename" "newfilename"</code> <br>&nbsp; rename file</li>
+<li><code>rm</code> <br>&nbsp; remove file</li>
+<li><code>setenv "VARNAME" "value"</code> <br>&nbsp; set environment variable to value</li>
+<li><code>echo $"VARNAME"</code> <br>&nbsp; get value of environment variable</li>
+<li><code>rmdir</code> <br>&nbsp; remove directory</li>
+<li><code>ls</code> <br>&nbsp; list files in directory</li>
+<li><code>pwd</code> <br>&nbsp; current working directory</li>
+<li><code>.</code> <br>&nbsp; current directory</li>
+<li><code>..</code> <br>&nbsp; parent directory</li>
+<li><code>echo "command"</code> <br>&nbsp; echoes command to output</li>
+<li><code>cp "filename" "path"</code> <br>&nbsp; copies file</li>
+<li><code>open filename</code><br>&nbsp; opens the file with the default program</li>
+<li><code>cat "filename"</code> <br>&nbsp; see file contents</li>
+<li><code>while [1]; do commands; done;</code> <br>&nbsp; opens a loop that will </li>
+<li><code>sleep "seconds"</code> <br>&nbsp; pauses the loop for some time</li>
+<li><code>for</code> <br>&nbsp; </li>
+<li><code>let "arg"</code> <br>&nbsp; evaluates "arg"</li>
+<li><code>make executable</code><br>&nbsp; </li>
+<li><code>| (pipe)</code> <br>&nbsp; placed after a command, it pipes the output as an input to the command after the pipe</li>
+<li><code>unzip filename.zip</code><br>&nbsp; unzips a zip file</li>
+<li><code>command > filename.txt </code><br>&nbsp; write output of a command to a file</li>
+<li><code>command >> filename.txt </code><br>&nbsp; append output of a command to a file</li>
+<li><code>nano "filename"</code><br>&nbsp; very simple text editor</li>
+<li><code>pico "filename"</code><br>&nbsp; even simpler text editor</li>
+<li><code>grep </code><br>&nbsp; powerful command to search in a file</li>
+<li><code>emacs</code><br>&nbsp; unix text editor</li>
+<li><code>vi</code><br>&nbsp; unix text editor</li>
+<br><br>
+<h4>Advanced</h4>
+<li><code>wc "filename"</code> <br>&nbsp; word, line and character count</li>
+<li><code>ssh</code> <br>&nbsp; connect to a server using ssh protocol</li>
+<li><code>curl - o "webaddress"</code><br>&nbsp; Download files directly from the Terminal (Mac OS X)</li>
+<li><code>tidy filename.html </code><br>&nbsp; clean html code</li>
+<li><code>/usr/share/dict/words </code><br>&nbsp; dictionary file</li>
+<li><code>sudo mdutil -E / ;sudo mdutil -i on /</code><br>&nbsp; re-index spotlight database</li>
+<li><code>unzip -l $@ filename.zip</code><br>&nbsp; shows the content of a zip file</li>
+<li><code>sudo /usr/libexec/locate.updatedb</code> <br>&nbsp; Update locate database</li>
+<li><code>locate "filename" </code><br>&nbsp; Search for filename</li>
+<li><code>mdfind "keyword1 keyword 2" </code> <br>&nbsp; search for files containing keywords in filename or metadata</li>
+<li><code>killall "applicationname"</code><br>&nbsp; stop application</li>
+<li><code>alias</code><br>&nbsp; </li>
+<li><code>date</code><br>&nbsp; displays date and time information in a variety of formats</li>
+<li><code>cal month year</code><br>&nbsp; calendar</li>
+<li><code>md5 "filename" or md5 "word" or openssl sha1 "filename"</code><br>&nbsp; calculates hash for file or word</li>
+<li><code>od -vAn -N4 -tu < /dev/urandom</code><br>&nbsp; produces random numbers</li>
+<br><br>
+<h4>Special</h4>
+<li><code>/System/Library/Frameworks/ScreenSaver.framework/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine -background &</code> <br>&nbsp; Make your Screensaver the background image of your desktop (the terminal window must remain opened)</li>
+<li><code>man -t "command" | ps2pdf - "filename.pdf"</code> <br>&nbsp; Saves a the man page of a command in pdf format</li>
+<li><code>screencapture -t jpg -x "directory"</code><br>&nbsp; Takes a screenshot</li>
+<li><code>for filename in *.jpg; do mv $filename ${filename%.jpg}.gif; done</code> <br>&nbsp; Changes the ending of all the jpg files to .gif.
+For more info on Pattern Substitution have a look <a href = "http://tldp.org/LDP/abs/html/parameter-substitution.html">here</a>.</li>
+<li><code>sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/A/Resources/airport /usr/sbin</code><br>&nbsp; Link to the airport command line utility</li>
+<li><code>sudo airport -z</code><br>&nbsp; Dissociate networks</li>
+<li><code>openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'</code><br>&nbsp; Generate random MAC address</li>
+<li><code>ifconfig en0 | grep ether</code><br>&nbsp; Find current MAC address</li>
+<li><code>sudo ifconfig en0 ether xx:xx:xx:xx:xx:xx</code><br>&nbsp; Spoof MAC address (where xx:xx:xx:xx:xx:xx the new desired MAC address)</li>
+<li><code>sudo mdutil -i on /Volumes/XY</code><br>&nbsp;Enable spotlight indexing of volume XY. With flag -i off you disable it.</li>
+<li><code>sudo mdutil -E /Volumes/XY</code><br>&nbsp;Build spotlight index for volume XY.</li>
+</ul>
+
+
+</p>
+        	<p> </p>
+
+
+        </div>
+	</div>
+    </div>
+    <div id="footer">
+    </div>
+</div>
+</body>
+</html>
