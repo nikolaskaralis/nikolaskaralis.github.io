@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>247.1</string>
+	<string>428</string>
 	<key>AMApplicationVersion</key>
-	<string>2.1.1</string>
+	<string>2.7</string>
 	<key>AMDocumentVersion</key>
 	<string>2</string>
 	<key>actions</key>
@@ -25,7 +25,11 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>305.4</string>
+				<string>570.3</string>
+				<key>AMApplication</key>
+				<array>
+					<string>PDF</string>
+				</array>
 				<key>AMParameterProperties</key>
 				<dict>
 					<key>joinTag</key>
@@ -49,14 +53,10 @@
 					<key>joinTag</key>
 					<integer>0</integer>
 				</dict>
-				<key>Application</key>
-				<array>
-					<string>PDF</string>
-				</array>
 				<key>BundleIdentifier</key>
 				<string>com.apple.action.joinpdf</string>
 				<key>CFBundleVersion</key>
-				<string>305.4</string>
+				<string>570.3</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -101,9 +101,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>302.000000:728.000000</string>
+				<string>309.000000:193.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Combine PDF Pages.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -123,7 +123,11 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.3</string>
+				<string>2.0.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
 				<key>AMParameterProperties</key>
 				<dict>
 					<key>replaceExisting</key>
@@ -156,14 +160,10 @@
 					<key>toDirectory</key>
 					<string>~/Desktop</string>
 				</dict>
-				<key>Application</key>
-				<array>
-					<string>Finder</string>
-				</array>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.CopyFiles</string>
 				<key>CFBundleVersion</key>
-				<string>1.3</string>
+				<string>2.0.1</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<true/>
 				<key>CanShowWhenRun</key>
@@ -173,7 +173,7 @@
 					<string>AMCategoryFilesAndFolders</string>
 				</array>
 				<key>Class Name</key>
-				<string>CopyFilesAction</string>
+				<string>AMCopyFilesAction</string>
 				<key>InputUUID</key>
 				<string>69110C30-3E6C-41CA-B724-32F316EA4934</string>
 				<key>Keywords</key>
@@ -221,9 +221,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>302.000000:554.000000</string>
+				<string>309.000000:296.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Copy Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Copy Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -243,7 +243,11 @@
 					</array>
 				</dict>
 				<key>AMActionVersion</key>
-				<string>1.3</string>
+				<string>1.3.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Finder</string>
+				</array>
 				<key>AMParameterProperties</key>
 				<dict>
 					<key>caseIndicator</key>
@@ -303,7 +307,7 @@
 				<key>ActionBundlePath</key>
 				<string>/System/Library/Automator/Rename Finder Items.action</string>
 				<key>ActionName</key>
-				<string>Name Single Item in Finder Item Names</string>
+				<string>Rename Finder Items: Name Single Item</string>
 				<key>ActionParameters</key>
 				<dict>
 					<key>caseIndicator</key>
@@ -351,14 +355,10 @@
 					<key>useLeadingZeros</key>
 					<false/>
 				</dict>
-				<key>Application</key>
-				<array>
-					<string>Finder</string>
-				</array>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.AddNumbersToFinderNames</string>
 				<key>CFBundleVersion</key>
-				<string>1.3</string>
+				<string>1.3.2</string>
 				<key>CanShowSelectedItemsWhenRun</key>
 				<false/>
 				<key>CanShowWhenRun</key>
@@ -368,7 +368,7 @@
 					<string>AMCategoryFilesAndFolders</string>
 				</array>
 				<key>Class Name</key>
-				<string>RenameFinderItemsClass</string>
+				<string>AMRenameFinderItemsAction</string>
 				<key>InputUUID</key>
 				<string>1B953DAF-EFEE-4AC4-B0CF-77898A04BB0D</string>
 				<key>Keywords</key>
@@ -690,9 +690,9 @@
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>302.000000:451.000000</string>
+				<string>309.000000:456.000000</string>
 				<key>nibPath</key>
-				<string>/System/Library/Automator/Rename Finder Items.action/Contents/Resources/English.lproj/main.nib</string>
+				<string>/System/Library/Automator/Rename Finder Items.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
 			<key>isViewVisible</key>
 			<true/>
@@ -700,14 +700,14 @@
 	</array>
 	<key>connectors</key>
 	<dict>
-		<key>2A8A0CE2-0242-4F44-AC43-EEFBE43F9A48</key>
+		<key>56C8C417-E647-480F-92E1-E22A48B469C0</key>
 		<dict>
 			<key>from</key>
 			<string>1C7AFF5B-70CE-4CA0-9498-A95808BCD04B - 1C7AFF5B-70CE-4CA0-9498-A95808BCD04B</string>
 			<key>to</key>
 			<string>516F08C7-D300-465E-B9A8-BC48996E139E - 516F08C7-D300-465E-B9A8-BC48996E139E</string>
 		</dict>
-		<key>3E192747-D46B-4CF8-81E8-505EF1E22266</key>
+		<key>C70091A7-0012-47FC-8B88-2F2011444212</key>
 		<dict>
 			<key>from</key>
 			<string>516F08C7-D300-465E-B9A8-BC48996E139E - 516F08C7-D300-465E-B9A8-BC48996E139E</string>
