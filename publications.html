@@ -20,6 +20,44 @@
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="docs/headerscript.js"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+    float: left;
+    width: 70%;
+    padding: 5px;
+    /* height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Create two equal columns that floats next to each other */
+.column2 {
+    float: left;
+    width: 30%;
+    padding: 5px;
+
+    /* height: 300px; /* Should be removed. Only for demonstration */
+}
+	
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+	
+    
+}
+
+.square{
+        width: 50px;
+        height: 50px;
+        Background-color: #fff;/* Your Color */
+    }
+</style>
 	
 </head>
 
@@ -30,7 +68,6 @@
     <div id="page">
 
         <div id="content">
-<p>
 
 <br>
 	<script type="text/javascript" src="//d39af2mgp1pqhg.cloudfront.net/widget-popup.js"></script>
@@ -44,12 +81,22 @@
 
 <h3>Publications</h3>
 
-<a href="http://dx.doi.org/10.1038/nn.4251"><img src="docs/images/research/Cover4Hz_NN.jpg" height="300" width="220" style="float:right"/></a>
+<div class="row">
+  <div class="column1" style="background-color:#FFFFFF">
 
-<div style="width:650px; float:left">
+			
+<!--<div style="width:650px; float:left">-->
 <ul>
 <li>
-<a href="http://doi.org/10.1016/j.neuron.2017.12.044">Prefrontal-Periaqueductal Gray-Projecting Neurons Mediate Context Fear Discrimination</a>
+<a href="https://www.biorxiv.org/content/early/2018/08/16/392530">Breathing coordinates limbic network dynamics underlying memory consolidation</a>
+<div style="float:right" data-badge-popover="right" data-badge-type="donut" data-altmetric-id="46585898" data-link-target='_blank' data-hide-no-mentions="true" class="altmetric-embed"></div>	
+<br>
+<strong>Karalis N</strong>, Sirota A
+</li>
+<ul><li>preprint : <a href="https://www.biorxiv.org/content/early/2018/08/16/392530">bioRxiv, 2018</a></li></ul>
+ <br>	
+<li>
+<a href="http://doi.org/10.1016/j.neuron.2017.12.044">Prefrontal-periaqueductal gray-projecting neurons mediate context fear discrimination</a>
 <div style="float:right" data-badge-popover="right" data-badge-type="donut" data-doi="10.1016/j.neuron.2017.12.044" data-link-target='_blank' data-hide-no-mentions="true" class="altmetric-embed"></div>	
 <br>
 Rozeske R, Jercog D, <strong>Karalis N</strong>, Chaudun F, Khoder S, Girard D, Winke N, Herry C
@@ -64,6 +111,7 @@ Dejean C *,  Courtin J *, <strong>Karalis N *</strong>, Chaudun F, Wurtz H, Bien
 </li>
 <ul><li>published in : <a href="http://dx.doi.org/10.1038/nature18630">Nature, 2016</a></li></ul>
  <br>
+	
 <li>
 <a href="http://www.nature.com/doifinder/10.1038/nn.4251">4-Hz oscillations synchronize prefrontal–amygdala circuits during fear behavior</a>
 <div style="float:right" data-badge-popover="right" data-badge-type="donut" data-doi="10.1038/nn.4251" data-link-target='_blank' data-hide-no-mentions="true" class="altmetric-embed"></div>
@@ -89,7 +137,7 @@ Courtin J, <strong>Karalis N</strong>, Gonzalez-Campo C., Wurtz H., Herry C.
 <ul><li>published in : <a href="http://www.sciencedirect.com/science/article/pii/S1074742713001925">Neurobiology of Learning and Memory, 2013</a></li></ul>
 <br>
 
-<li><a href="">Effects of Himalayan Tradition meditation during a SSVEP study</a>
+<li><a href="">Effects of Himalayan Tradition meditation during an SSVEP study</a>
 <br><strong>Karalis N</strong>, Karanasiou I, Uzunoglu N, & Braboszcz C
 </li>
 <ul><li>published in : <a href="">Neuroscience Letters, 2011</a></li></ul>
@@ -107,11 +155,23 @@ Falagas ME, Peppas G, Matthaiou DK, Karageorgopoulos DE, <strong>Karalis N</stro
             </div>
 <!--<div style="width:100%;text-align:right"><iframe src="https://orcid.org/static/html/widget.html?orcid=0000-0002-1804-9756&t=154471&locale=en" frameborder="0" height="310" width="210px" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="no" allowtransparency="true"></iframe></div>-->
 
+  <div class="column2"  style="background-color:#FFFFFF">
+	  <div class="square"></div>
+	  <div class="square"></div>
+	  <div class="square"></div>
+	  <div class="square"></div>
+	  
+	  
+	  <a href="http://dx.doi.org/10.1038/nn.4251"><img src="docs/images/research/Cover4Hz_NN.jpg" height="300" width="220"/></a></div>
+	  
+  </div>
+
+		
+		</div>
 
 
 
 
-</p>
         </div>
 	</div>
     </div>
