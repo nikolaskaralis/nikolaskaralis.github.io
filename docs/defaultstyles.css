@@ -45,7 +45,8 @@ body {
 	padding:15px;
 	background-color:#FFF;
 	margin:0;
-	background-image: url(images/main.jpg);    
+	background-image: url(images/main.jpg);
+	title: 'test'
 }
 h1 {
 	margin:0;
